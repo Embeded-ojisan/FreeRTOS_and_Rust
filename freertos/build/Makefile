@@ -1,0 +1,24 @@
+[env]
+FREERTOS_KERNEL_ROOT_DIR = "${PWD}/freertos/FreeRTOS/FreeRTOS"
+FREERTOS_KERNEL_SOURCE_DIR = "${FREERTOS_KERNEL_ROOT_DIR}/Source"
+FREERTOS_KERNEL_PORTABLE_DIR = "${FREERTOS_KERNEL_SOURCE_DIR}/portable"
+FREERTOS_KERNEL_INCLUDE_DIR = "${FREERTOS_KERNEL_SOURCE_DIR}/include"
+
+FREERTOS_KERNEL_PORTABLE_DIR_SPEC = "${FREERTOS_KERNEL_PORTABLE_DIR}/GCC/RISC-V"
+
+SRC = [
+    "${FREERTOS_KERNEL_SOURCE_DIR}/tasks.c",
+    "${FREERTOS_KERNEL_SOURCE_DIR}/list.c",
+    "${FREERTOS_KERNEL_SOURCE_DIR}/queue.c",
+    "${FREERTOS_KERNEL_SOURCE_DIR}/timers.c",
+    "${FREERTOS_KERNEL_SOURCE_DIR}/event_groups.c"
+]
+
+CC = "riscv64-unknown-elf-gcc"
+
+CFALGS = [
+    "${FREERTOS_KERNEL_INCLUDE_DIR}",
+    "/usr/include/"
+]
+
+riscv64-unknown-elf-gcc -I/usr/include/ -I/freertos/FreeRTOS/FreeRTOS/Source/include/ -c ${FREERTOS_KERNEL_SOURCE_DIR}/tasks.c
