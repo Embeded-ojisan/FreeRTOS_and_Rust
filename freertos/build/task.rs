@@ -269,31 +269,31 @@ pub const tskMPU_REGION_DEVICE_MEMORY: u32 = 16;
 pub const tskMPU_READ_PERMISSION: u32 = 1;
 pub const tskMPU_WRITE_PERMISSION: u32 = 2;
 pub const tskDEFAULT_INDEX_TO_NOTIFY: u32 = 0;
-pub type size_t = ::std::os::raw::c_ulong;
-pub type wchar_t = ::std::os::raw::c_int;
+pub type size_t = cty::c_ulong;
+pub type wchar_t = cty::c_int;
 #[repr(C)]
 #[repr(align(16))]
 #[derive(Debug, Copy, Clone)]
 pub struct max_align_t {
-    pub __clang_max_align_nonce1: ::std::os::raw::c_longlong,
+    pub __clang_max_align_nonce1: cty::c_longlong,
     pub __bindgen_padding_0: u64,
     pub __clang_max_align_nonce2: u128,
 }
 #[test]
 fn bindgen_test_layout_max_align_t() {
     assert_eq!(
-        ::std::mem::size_of::<max_align_t>(),
+        ::core::mem::size_of::<max_align_t>(),
         32usize,
         concat!("Size of: ", stringify!(max_align_t))
     );
     assert_eq!(
-        ::std::mem::align_of::<max_align_t>(),
+        ::core::mem::align_of::<max_align_t>(),
         16usize,
         concat!("Alignment of ", stringify!(max_align_t))
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<max_align_t>())).__clang_max_align_nonce1 as *const _ as usize
+            &(*(::core::ptr::null::<max_align_t>())).__clang_max_align_nonce1 as *const _ as usize
         },
         0usize,
         concat!(
@@ -305,7 +305,7 @@ fn bindgen_test_layout_max_align_t() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<max_align_t>())).__clang_max_align_nonce2 as *const _ as usize
+            &(*(::core::ptr::null::<max_align_t>())).__clang_max_align_nonce2 as *const _ as usize
         },
         16usize,
         concat!(
@@ -316,18 +316,18 @@ fn bindgen_test_layout_max_align_t() {
         )
     );
 }
-pub type __u_char = ::std::os::raw::c_uchar;
-pub type __u_short = ::std::os::raw::c_ushort;
-pub type __u_int = ::std::os::raw::c_uint;
-pub type __u_long = ::std::os::raw::c_ulong;
-pub type __int8_t = ::std::os::raw::c_schar;
-pub type __uint8_t = ::std::os::raw::c_uchar;
-pub type __int16_t = ::std::os::raw::c_short;
-pub type __uint16_t = ::std::os::raw::c_ushort;
-pub type __int32_t = ::std::os::raw::c_int;
-pub type __uint32_t = ::std::os::raw::c_uint;
-pub type __int64_t = ::std::os::raw::c_long;
-pub type __uint64_t = ::std::os::raw::c_ulong;
+pub type __u_char = cty::c_uchar;
+pub type __u_short = cty::c_ushort;
+pub type __u_int = cty::c_uint;
+pub type __u_long = cty::c_ulong;
+pub type __int8_t = cty::c_schar;
+pub type __uint8_t = cty::c_uchar;
+pub type __int16_t = cty::c_short;
+pub type __uint16_t = cty::c_ushort;
+pub type __int32_t = cty::c_int;
+pub type __uint32_t = cty::c_uint;
+pub type __int64_t = cty::c_long;
+pub type __uint64_t = cty::c_ulong;
 pub type __int_least8_t = __int8_t;
 pub type __uint_least8_t = __uint8_t;
 pub type __int_least16_t = __int16_t;
@@ -336,39 +336,39 @@ pub type __int_least32_t = __int32_t;
 pub type __uint_least32_t = __uint32_t;
 pub type __int_least64_t = __int64_t;
 pub type __uint_least64_t = __uint64_t;
-pub type __quad_t = ::std::os::raw::c_long;
-pub type __u_quad_t = ::std::os::raw::c_ulong;
-pub type __intmax_t = ::std::os::raw::c_long;
-pub type __uintmax_t = ::std::os::raw::c_ulong;
-pub type __dev_t = ::std::os::raw::c_ulong;
-pub type __uid_t = ::std::os::raw::c_uint;
-pub type __gid_t = ::std::os::raw::c_uint;
-pub type __ino_t = ::std::os::raw::c_ulong;
-pub type __ino64_t = ::std::os::raw::c_ulong;
-pub type __mode_t = ::std::os::raw::c_uint;
-pub type __nlink_t = ::std::os::raw::c_ulong;
-pub type __off_t = ::std::os::raw::c_long;
-pub type __off64_t = ::std::os::raw::c_long;
-pub type __pid_t = ::std::os::raw::c_int;
+pub type __quad_t = cty::c_long;
+pub type __u_quad_t = cty::c_ulong;
+pub type __intmax_t = cty::c_long;
+pub type __uintmax_t = cty::c_ulong;
+pub type __dev_t = cty::c_ulong;
+pub type __uid_t = cty::c_uint;
+pub type __gid_t = cty::c_uint;
+pub type __ino_t = cty::c_ulong;
+pub type __ino64_t = cty::c_ulong;
+pub type __mode_t = cty::c_uint;
+pub type __nlink_t = cty::c_ulong;
+pub type __off_t = cty::c_long;
+pub type __off64_t = cty::c_long;
+pub type __pid_t = cty::c_int;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __fsid_t {
-    pub __val: [::std::os::raw::c_int; 2usize],
+    pub __val: [cty::c_int; 2usize],
 }
 #[test]
 fn bindgen_test_layout___fsid_t() {
     assert_eq!(
-        ::std::mem::size_of::<__fsid_t>(),
+        ::core::mem::size_of::<__fsid_t>(),
         8usize,
         concat!("Size of: ", stringify!(__fsid_t))
     );
     assert_eq!(
-        ::std::mem::align_of::<__fsid_t>(),
+        ::core::mem::align_of::<__fsid_t>(),
         4usize,
         concat!("Alignment of ", stringify!(__fsid_t))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__fsid_t>())).__val as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<__fsid_t>())).__val as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -378,34 +378,34 @@ fn bindgen_test_layout___fsid_t() {
         )
     );
 }
-pub type __clock_t = ::std::os::raw::c_long;
-pub type __rlim_t = ::std::os::raw::c_ulong;
-pub type __rlim64_t = ::std::os::raw::c_ulong;
-pub type __id_t = ::std::os::raw::c_uint;
-pub type __time_t = ::std::os::raw::c_long;
-pub type __useconds_t = ::std::os::raw::c_uint;
-pub type __suseconds_t = ::std::os::raw::c_long;
-pub type __suseconds64_t = ::std::os::raw::c_long;
-pub type __daddr_t = ::std::os::raw::c_int;
-pub type __key_t = ::std::os::raw::c_int;
-pub type __clockid_t = ::std::os::raw::c_int;
-pub type __timer_t = *mut ::std::os::raw::c_void;
-pub type __blksize_t = ::std::os::raw::c_long;
-pub type __blkcnt_t = ::std::os::raw::c_long;
-pub type __blkcnt64_t = ::std::os::raw::c_long;
-pub type __fsblkcnt_t = ::std::os::raw::c_ulong;
-pub type __fsblkcnt64_t = ::std::os::raw::c_ulong;
-pub type __fsfilcnt_t = ::std::os::raw::c_ulong;
-pub type __fsfilcnt64_t = ::std::os::raw::c_ulong;
-pub type __fsword_t = ::std::os::raw::c_long;
-pub type __ssize_t = ::std::os::raw::c_long;
-pub type __syscall_slong_t = ::std::os::raw::c_long;
-pub type __syscall_ulong_t = ::std::os::raw::c_ulong;
+pub type __clock_t = cty::c_long;
+pub type __rlim_t = cty::c_ulong;
+pub type __rlim64_t = cty::c_ulong;
+pub type __id_t = cty::c_uint;
+pub type __time_t = cty::c_long;
+pub type __useconds_t = cty::c_uint;
+pub type __suseconds_t = cty::c_long;
+pub type __suseconds64_t = cty::c_long;
+pub type __daddr_t = cty::c_int;
+pub type __key_t = cty::c_int;
+pub type __clockid_t = cty::c_int;
+pub type __timer_t = *mut cty::c_void;
+pub type __blksize_t = cty::c_long;
+pub type __blkcnt_t = cty::c_long;
+pub type __blkcnt64_t = cty::c_long;
+pub type __fsblkcnt_t = cty::c_ulong;
+pub type __fsblkcnt64_t = cty::c_ulong;
+pub type __fsfilcnt_t = cty::c_ulong;
+pub type __fsfilcnt64_t = cty::c_ulong;
+pub type __fsword_t = cty::c_long;
+pub type __ssize_t = cty::c_long;
+pub type __syscall_slong_t = cty::c_long;
+pub type __syscall_ulong_t = cty::c_ulong;
 pub type __loff_t = __off64_t;
-pub type __caddr_t = *mut ::std::os::raw::c_char;
-pub type __intptr_t = ::std::os::raw::c_long;
-pub type __socklen_t = ::std::os::raw::c_uint;
-pub type __sig_atomic_t = ::std::os::raw::c_int;
+pub type __caddr_t = *mut cty::c_char;
+pub type __intptr_t = cty::c_long;
+pub type __socklen_t = cty::c_uint;
+pub type __sig_atomic_t = cty::c_int;
 pub type int_least8_t = __int_least8_t;
 pub type int_least16_t = __int_least16_t;
 pub type int_least32_t = __int_least32_t;
@@ -414,30 +414,29 @@ pub type uint_least8_t = __uint_least8_t;
 pub type uint_least16_t = __uint_least16_t;
 pub type uint_least32_t = __uint_least32_t;
 pub type uint_least64_t = __uint_least64_t;
-pub type int_fast8_t = ::std::os::raw::c_schar;
-pub type int_fast16_t = ::std::os::raw::c_long;
-pub type int_fast32_t = ::std::os::raw::c_long;
-pub type int_fast64_t = ::std::os::raw::c_long;
-pub type uint_fast8_t = ::std::os::raw::c_uchar;
-pub type uint_fast16_t = ::std::os::raw::c_ulong;
-pub type uint_fast32_t = ::std::os::raw::c_ulong;
-pub type uint_fast64_t = ::std::os::raw::c_ulong;
+pub type int_fast8_t = cty::c_schar;
+pub type int_fast16_t = cty::c_long;
+pub type int_fast32_t = cty::c_long;
+pub type int_fast64_t = cty::c_long;
+pub type uint_fast8_t = cty::c_uchar;
+pub type uint_fast16_t = cty::c_ulong;
+pub type uint_fast32_t = cty::c_ulong;
+pub type uint_fast64_t = cty::c_ulong;
 pub type intmax_t = __intmax_t;
 pub type uintmax_t = __uintmax_t;
 extern "C" {
     pub fn vAssertCalled();
 }
 extern "C" {
-    pub fn ulGetRunTimeCounterValue() -> ::std::os::raw::c_ulong;
+    pub fn ulGetRunTimeCounterValue() -> cty::c_ulong;
 }
 extern "C" {
-    pub fn vLoggingPrintf(pcFormatString: *const ::std::os::raw::c_char, ...);
+    pub fn vLoggingPrintf(pcFormatString: *const cty::c_char, ...);
 }
-pub type TaskFunction_t =
-    ::std::option::Option<unsafe extern "C" fn(arg: *mut ::std::os::raw::c_void)>;
+pub type TaskFunction_t = ::core::option::Option<unsafe extern "C" fn(arg: *mut cty::c_void)>;
 pub type StackType_t = u32;
-pub type BaseType_t = ::std::os::raw::c_long;
-pub type UBaseType_t = ::std::os::raw::c_ulong;
+pub type BaseType_t = cty::c_long;
+pub type UBaseType_t = cty::c_ulong;
 pub type TickType_t = u32;
 extern "C" {
     pub fn vPortEnterCritical();
@@ -455,7 +454,7 @@ extern "C" {
     pub fn pxPortInitialiseStack(
         pxTopOfStack: *mut StackType_t,
         pxCode: TaskFunction_t,
-        pvParameters: *mut ::std::os::raw::c_void,
+        pvParameters: *mut cty::c_void,
     ) -> *mut StackType_t;
 }
 #[repr(C)]
@@ -467,17 +466,17 @@ pub struct HeapRegion {
 #[test]
 fn bindgen_test_layout_HeapRegion() {
     assert_eq!(
-        ::std::mem::size_of::<HeapRegion>(),
+        ::core::mem::size_of::<HeapRegion>(),
         16usize,
         concat!("Size of: ", stringify!(HeapRegion))
     );
     assert_eq!(
-        ::std::mem::align_of::<HeapRegion>(),
+        ::core::mem::align_of::<HeapRegion>(),
         8usize,
         concat!("Alignment of ", stringify!(HeapRegion))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<HeapRegion>())).pucStartAddress as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<HeapRegion>())).pucStartAddress as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -487,7 +486,7 @@ fn bindgen_test_layout_HeapRegion() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<HeapRegion>())).xSizeInBytes as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<HeapRegion>())).xSizeInBytes as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -512,18 +511,18 @@ pub struct xHeapStats {
 #[test]
 fn bindgen_test_layout_xHeapStats() {
     assert_eq!(
-        ::std::mem::size_of::<xHeapStats>(),
+        ::core::mem::size_of::<xHeapStats>(),
         56usize,
         concat!("Size of: ", stringify!(xHeapStats))
     );
     assert_eq!(
-        ::std::mem::align_of::<xHeapStats>(),
+        ::core::mem::align_of::<xHeapStats>(),
         8usize,
         concat!("Alignment of ", stringify!(xHeapStats))
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xHeapStats>())).xAvailableHeapSpaceInBytes as *const _ as usize
+            &(*(::core::ptr::null::<xHeapStats>())).xAvailableHeapSpaceInBytes as *const _ as usize
         },
         0usize,
         concat!(
@@ -535,7 +534,7 @@ fn bindgen_test_layout_xHeapStats() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xHeapStats>())).xSizeOfLargestFreeBlockInBytes as *const _
+            &(*(::core::ptr::null::<xHeapStats>())).xSizeOfLargestFreeBlockInBytes as *const _
                 as usize
         },
         8usize,
@@ -548,7 +547,7 @@ fn bindgen_test_layout_xHeapStats() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xHeapStats>())).xSizeOfSmallestFreeBlockInBytes as *const _
+            &(*(::core::ptr::null::<xHeapStats>())).xSizeOfSmallestFreeBlockInBytes as *const _
                 as usize
         },
         16usize,
@@ -560,7 +559,7 @@ fn bindgen_test_layout_xHeapStats() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xHeapStats>())).xNumberOfFreeBlocks as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xHeapStats>())).xNumberOfFreeBlocks as *const _ as usize },
         24usize,
         concat!(
             "Offset of field: ",
@@ -571,7 +570,7 @@ fn bindgen_test_layout_xHeapStats() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xHeapStats>())).xMinimumEverFreeBytesRemaining as *const _
+            &(*(::core::ptr::null::<xHeapStats>())).xMinimumEverFreeBytesRemaining as *const _
                 as usize
         },
         32usize,
@@ -584,7 +583,7 @@ fn bindgen_test_layout_xHeapStats() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xHeapStats>())).xNumberOfSuccessfulAllocations as *const _
+            &(*(::core::ptr::null::<xHeapStats>())).xNumberOfSuccessfulAllocations as *const _
                 as usize
         },
         40usize,
@@ -597,7 +596,7 @@ fn bindgen_test_layout_xHeapStats() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xHeapStats>())).xNumberOfSuccessfulFrees as *const _ as usize
+            &(*(::core::ptr::null::<xHeapStats>())).xNumberOfSuccessfulFrees as *const _ as usize
         },
         48usize,
         concat!(
@@ -616,13 +615,13 @@ extern "C" {
     pub fn vPortGetHeapStats(pxHeapStats: *mut HeapStats_t);
 }
 extern "C" {
-    pub fn pvPortMalloc(xSize: size_t) -> *mut ::std::os::raw::c_void;
+    pub fn pvPortMalloc(xSize: size_t) -> *mut cty::c_void;
 }
 extern "C" {
-    pub fn pvPortCalloc(xNum: size_t, xSize: size_t) -> *mut ::std::os::raw::c_void;
+    pub fn pvPortCalloc(xNum: size_t, xSize: size_t) -> *mut cty::c_void;
 }
 extern "C" {
-    pub fn vPortFree(pv: *mut ::std::os::raw::c_void);
+    pub fn vPortFree(pv: *mut cty::c_void);
 }
 extern "C" {
     pub fn vPortInitialiseBlocks();
@@ -652,22 +651,22 @@ extern "C" {
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_LIST_ITEM {
     pub xDummy2: TickType_t,
-    pub pvDummy3: [*mut ::std::os::raw::c_void; 4usize],
+    pub pvDummy3: [*mut cty::c_void; 4usize],
 }
 #[test]
 fn bindgen_test_layout_xSTATIC_LIST_ITEM() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_LIST_ITEM>(),
+        ::core::mem::size_of::<xSTATIC_LIST_ITEM>(),
         40usize,
         concat!("Size of: ", stringify!(xSTATIC_LIST_ITEM))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_LIST_ITEM>(),
+        ::core::mem::align_of::<xSTATIC_LIST_ITEM>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_LIST_ITEM))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_LIST_ITEM>())).xDummy2 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_LIST_ITEM>())).xDummy2 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -677,7 +676,7 @@ fn bindgen_test_layout_xSTATIC_LIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_LIST_ITEM>())).pvDummy3 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_LIST_ITEM>())).pvDummy3 as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -692,22 +691,22 @@ pub type StaticListItem_t = xSTATIC_LIST_ITEM;
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_MINI_LIST_ITEM {
     pub xDummy2: TickType_t,
-    pub pvDummy3: [*mut ::std::os::raw::c_void; 2usize],
+    pub pvDummy3: [*mut cty::c_void; 2usize],
 }
 #[test]
 fn bindgen_test_layout_xSTATIC_MINI_LIST_ITEM() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_MINI_LIST_ITEM>(),
+        ::core::mem::size_of::<xSTATIC_MINI_LIST_ITEM>(),
         24usize,
         concat!("Size of: ", stringify!(xSTATIC_MINI_LIST_ITEM))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_MINI_LIST_ITEM>(),
+        ::core::mem::align_of::<xSTATIC_MINI_LIST_ITEM>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_MINI_LIST_ITEM))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_MINI_LIST_ITEM>())).xDummy2 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_MINI_LIST_ITEM>())).xDummy2 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -717,7 +716,9 @@ fn bindgen_test_layout_xSTATIC_MINI_LIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_MINI_LIST_ITEM>())).pvDummy3 as *const _ as usize },
+        unsafe {
+            &(*(::core::ptr::null::<xSTATIC_MINI_LIST_ITEM>())).pvDummy3 as *const _ as usize
+        },
         8usize,
         concat!(
             "Offset of field: ",
@@ -732,23 +733,23 @@ pub type StaticMiniListItem_t = xSTATIC_MINI_LIST_ITEM;
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_LIST {
     pub uxDummy2: UBaseType_t,
-    pub pvDummy3: *mut ::std::os::raw::c_void,
+    pub pvDummy3: *mut cty::c_void,
     pub xDummy4: StaticMiniListItem_t,
 }
 #[test]
 fn bindgen_test_layout_xSTATIC_LIST() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_LIST>(),
+        ::core::mem::size_of::<xSTATIC_LIST>(),
         40usize,
         concat!("Size of: ", stringify!(xSTATIC_LIST))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_LIST>(),
+        ::core::mem::align_of::<xSTATIC_LIST>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_LIST))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_LIST>())).uxDummy2 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_LIST>())).uxDummy2 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -758,7 +759,7 @@ fn bindgen_test_layout_xSTATIC_LIST() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_LIST>())).pvDummy3 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_LIST>())).pvDummy3 as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -768,7 +769,7 @@ fn bindgen_test_layout_xSTATIC_LIST() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_LIST>())).xDummy4 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_LIST>())).xDummy4 as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -782,10 +783,10 @@ pub type StaticList_t = xSTATIC_LIST;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_TCB {
-    pub pxDummy1: *mut ::std::os::raw::c_void,
+    pub pxDummy1: *mut cty::c_void,
     pub xDummy3: [StaticListItem_t; 2usize],
     pub uxDummy5: UBaseType_t,
-    pub pxDummy6: *mut ::std::os::raw::c_void,
+    pub pxDummy6: *mut cty::c_void,
     pub ucDummy7: [u8; 10usize],
     pub uxDummy10: [UBaseType_t; 2usize],
     pub uxDummy12: [UBaseType_t; 2usize],
@@ -797,17 +798,17 @@ pub struct xSTATIC_TCB {
 #[test]
 fn bindgen_test_layout_xSTATIC_TCB() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_TCB>(),
+        ::core::mem::size_of::<xSTATIC_TCB>(),
         160usize,
         concat!("Size of: ", stringify!(xSTATIC_TCB))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_TCB>(),
+        ::core::mem::align_of::<xSTATIC_TCB>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_TCB))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).pxDummy1 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).pxDummy1 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -817,7 +818,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).xDummy3 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).xDummy3 as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -827,7 +828,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).uxDummy5 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).uxDummy5 as *const _ as usize },
         88usize,
         concat!(
             "Offset of field: ",
@@ -837,7 +838,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).pxDummy6 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).pxDummy6 as *const _ as usize },
         96usize,
         concat!(
             "Offset of field: ",
@@ -847,7 +848,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).ucDummy7 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).ucDummy7 as *const _ as usize },
         104usize,
         concat!(
             "Offset of field: ",
@@ -857,7 +858,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).uxDummy10 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).uxDummy10 as *const _ as usize },
         120usize,
         concat!(
             "Offset of field: ",
@@ -867,7 +868,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).uxDummy12 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).uxDummy12 as *const _ as usize },
         136usize,
         concat!(
             "Offset of field: ",
@@ -877,7 +878,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).ulDummy18 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).ulDummy18 as *const _ as usize },
         152usize,
         concat!(
             "Offset of field: ",
@@ -887,7 +888,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).ucDummy19 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).ucDummy19 as *const _ as usize },
         156usize,
         concat!(
             "Offset of field: ",
@@ -897,7 +898,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).uxDummy20 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).uxDummy20 as *const _ as usize },
         157usize,
         concat!(
             "Offset of field: ",
@@ -907,7 +908,7 @@ fn bindgen_test_layout_xSTATIC_TCB() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TCB>())).ucDummy21 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TCB>())).ucDummy21 as *const _ as usize },
         158usize,
         concat!(
             "Offset of field: ",
@@ -921,7 +922,7 @@ pub type StaticTask_t = xSTATIC_TCB;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct xSTATIC_QUEUE {
-    pub pvDummy1: [*mut ::std::os::raw::c_void; 3usize],
+    pub pvDummy1: [*mut cty::c_void; 3usize],
     pub u: xSTATIC_QUEUE__bindgen_ty_1,
     pub xDummy3: [StaticList_t; 2usize],
     pub uxDummy4: [UBaseType_t; 3usize],
@@ -933,24 +934,24 @@ pub struct xSTATIC_QUEUE {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union xSTATIC_QUEUE__bindgen_ty_1 {
-    pub pvDummy2: *mut ::std::os::raw::c_void,
+    pub pvDummy2: *mut cty::c_void,
     pub uxDummy2: UBaseType_t,
 }
 #[test]
 fn bindgen_test_layout_xSTATIC_QUEUE__bindgen_ty_1() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_QUEUE__bindgen_ty_1>(),
+        ::core::mem::size_of::<xSTATIC_QUEUE__bindgen_ty_1>(),
         8usize,
         concat!("Size of: ", stringify!(xSTATIC_QUEUE__bindgen_ty_1))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_QUEUE__bindgen_ty_1>(),
+        ::core::mem::align_of::<xSTATIC_QUEUE__bindgen_ty_1>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_QUEUE__bindgen_ty_1))
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xSTATIC_QUEUE__bindgen_ty_1>())).pvDummy2 as *const _ as usize
+            &(*(::core::ptr::null::<xSTATIC_QUEUE__bindgen_ty_1>())).pvDummy2 as *const _ as usize
         },
         0usize,
         concat!(
@@ -962,7 +963,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE__bindgen_ty_1() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xSTATIC_QUEUE__bindgen_ty_1>())).uxDummy2 as *const _ as usize
+            &(*(::core::ptr::null::<xSTATIC_QUEUE__bindgen_ty_1>())).uxDummy2 as *const _ as usize
         },
         0usize,
         concat!(
@@ -976,17 +977,17 @@ fn bindgen_test_layout_xSTATIC_QUEUE__bindgen_ty_1() {
 #[test]
 fn bindgen_test_layout_xSTATIC_QUEUE() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_QUEUE>(),
+        ::core::mem::size_of::<xSTATIC_QUEUE>(),
         160usize,
         concat!("Size of: ", stringify!(xSTATIC_QUEUE))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_QUEUE>(),
+        ::core::mem::align_of::<xSTATIC_QUEUE>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_QUEUE))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).pvDummy1 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).pvDummy1 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -996,7 +997,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).u as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).u as *const _ as usize },
         24usize,
         concat!(
             "Offset of field: ",
@@ -1006,7 +1007,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).xDummy3 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).xDummy3 as *const _ as usize },
         32usize,
         concat!(
             "Offset of field: ",
@@ -1016,7 +1017,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).uxDummy4 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).uxDummy4 as *const _ as usize },
         112usize,
         concat!(
             "Offset of field: ",
@@ -1026,7 +1027,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).ucDummy5 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).ucDummy5 as *const _ as usize },
         136usize,
         concat!(
             "Offset of field: ",
@@ -1036,7 +1037,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).ucDummy6 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).ucDummy6 as *const _ as usize },
         138usize,
         concat!(
             "Offset of field: ",
@@ -1046,7 +1047,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).uxDummy8 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).uxDummy8 as *const _ as usize },
         144usize,
         concat!(
             "Offset of field: ",
@@ -1056,7 +1057,7 @@ fn bindgen_test_layout_xSTATIC_QUEUE() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_QUEUE>())).ucDummy9 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_QUEUE>())).ucDummy9 as *const _ as usize },
         152usize,
         concat!(
             "Offset of field: ",
@@ -1079,17 +1080,17 @@ pub struct xSTATIC_EVENT_GROUP {
 #[test]
 fn bindgen_test_layout_xSTATIC_EVENT_GROUP() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_EVENT_GROUP>(),
+        ::core::mem::size_of::<xSTATIC_EVENT_GROUP>(),
         64usize,
         concat!("Size of: ", stringify!(xSTATIC_EVENT_GROUP))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_EVENT_GROUP>(),
+        ::core::mem::align_of::<xSTATIC_EVENT_GROUP>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_EVENT_GROUP))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_EVENT_GROUP>())).xDummy1 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_EVENT_GROUP>())).xDummy1 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1099,7 +1100,7 @@ fn bindgen_test_layout_xSTATIC_EVENT_GROUP() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_EVENT_GROUP>())).xDummy2 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_EVENT_GROUP>())).xDummy2 as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1109,7 +1110,7 @@ fn bindgen_test_layout_xSTATIC_EVENT_GROUP() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_EVENT_GROUP>())).uxDummy3 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_EVENT_GROUP>())).uxDummy3 as *const _ as usize },
         48usize,
         concat!(
             "Offset of field: ",
@@ -1119,7 +1120,7 @@ fn bindgen_test_layout_xSTATIC_EVENT_GROUP() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_EVENT_GROUP>())).ucDummy4 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_EVENT_GROUP>())).ucDummy4 as *const _ as usize },
         56usize,
         concat!(
             "Offset of field: ",
@@ -1133,10 +1134,10 @@ pub type StaticEventGroup_t = xSTATIC_EVENT_GROUP;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_TIMER {
-    pub pvDummy1: *mut ::std::os::raw::c_void,
+    pub pvDummy1: *mut cty::c_void,
     pub xDummy2: StaticListItem_t,
     pub xDummy3: TickType_t,
-    pub pvDummy5: *mut ::std::os::raw::c_void,
+    pub pvDummy5: *mut cty::c_void,
     pub pvDummy6: TaskFunction_t,
     pub uxDummy7: UBaseType_t,
     pub ucDummy8: u8,
@@ -1144,17 +1145,17 @@ pub struct xSTATIC_TIMER {
 #[test]
 fn bindgen_test_layout_xSTATIC_TIMER() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_TIMER>(),
+        ::core::mem::size_of::<xSTATIC_TIMER>(),
         88usize,
         concat!("Size of: ", stringify!(xSTATIC_TIMER))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_TIMER>(),
+        ::core::mem::align_of::<xSTATIC_TIMER>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_TIMER))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TIMER>())).pvDummy1 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TIMER>())).pvDummy1 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1164,7 +1165,7 @@ fn bindgen_test_layout_xSTATIC_TIMER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TIMER>())).xDummy2 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TIMER>())).xDummy2 as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1174,7 +1175,7 @@ fn bindgen_test_layout_xSTATIC_TIMER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TIMER>())).xDummy3 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TIMER>())).xDummy3 as *const _ as usize },
         48usize,
         concat!(
             "Offset of field: ",
@@ -1184,7 +1185,7 @@ fn bindgen_test_layout_xSTATIC_TIMER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TIMER>())).pvDummy5 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TIMER>())).pvDummy5 as *const _ as usize },
         56usize,
         concat!(
             "Offset of field: ",
@@ -1194,7 +1195,7 @@ fn bindgen_test_layout_xSTATIC_TIMER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TIMER>())).pvDummy6 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TIMER>())).pvDummy6 as *const _ as usize },
         64usize,
         concat!(
             "Offset of field: ",
@@ -1204,7 +1205,7 @@ fn bindgen_test_layout_xSTATIC_TIMER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TIMER>())).uxDummy7 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TIMER>())).uxDummy7 as *const _ as usize },
         72usize,
         concat!(
             "Offset of field: ",
@@ -1214,7 +1215,7 @@ fn bindgen_test_layout_xSTATIC_TIMER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_TIMER>())).ucDummy8 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_TIMER>())).ucDummy8 as *const _ as usize },
         80usize,
         concat!(
             "Offset of field: ",
@@ -1229,7 +1230,7 @@ pub type StaticTimer_t = xSTATIC_TIMER;
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_STREAM_BUFFER {
     pub uxDummy1: [size_t; 4usize],
-    pub pvDummy2: [*mut ::std::os::raw::c_void; 3usize],
+    pub pvDummy2: [*mut cty::c_void; 3usize],
     pub ucDummy3: u8,
     pub uxDummy4: UBaseType_t,
     pub uxDummy6: UBaseType_t,
@@ -1237,17 +1238,17 @@ pub struct xSTATIC_STREAM_BUFFER {
 #[test]
 fn bindgen_test_layout_xSTATIC_STREAM_BUFFER() {
     assert_eq!(
-        ::std::mem::size_of::<xSTATIC_STREAM_BUFFER>(),
+        ::core::mem::size_of::<xSTATIC_STREAM_BUFFER>(),
         80usize,
         concat!("Size of: ", stringify!(xSTATIC_STREAM_BUFFER))
     );
     assert_eq!(
-        ::std::mem::align_of::<xSTATIC_STREAM_BUFFER>(),
+        ::core::mem::align_of::<xSTATIC_STREAM_BUFFER>(),
         8usize,
         concat!("Alignment of ", stringify!(xSTATIC_STREAM_BUFFER))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_STREAM_BUFFER>())).uxDummy1 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_STREAM_BUFFER>())).uxDummy1 as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1257,7 +1258,7 @@ fn bindgen_test_layout_xSTATIC_STREAM_BUFFER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_STREAM_BUFFER>())).pvDummy2 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_STREAM_BUFFER>())).pvDummy2 as *const _ as usize },
         32usize,
         concat!(
             "Offset of field: ",
@@ -1267,7 +1268,7 @@ fn bindgen_test_layout_xSTATIC_STREAM_BUFFER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_STREAM_BUFFER>())).ucDummy3 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_STREAM_BUFFER>())).ucDummy3 as *const _ as usize },
         56usize,
         concat!(
             "Offset of field: ",
@@ -1277,7 +1278,7 @@ fn bindgen_test_layout_xSTATIC_STREAM_BUFFER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_STREAM_BUFFER>())).uxDummy4 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_STREAM_BUFFER>())).uxDummy4 as *const _ as usize },
         64usize,
         concat!(
             "Offset of field: ",
@@ -1287,7 +1288,7 @@ fn bindgen_test_layout_xSTATIC_STREAM_BUFFER() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xSTATIC_STREAM_BUFFER>())).uxDummy6 as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xSTATIC_STREAM_BUFFER>())).uxDummy6 as *const _ as usize },
         72usize,
         concat!(
             "Offset of field: ",
@@ -1309,23 +1310,23 @@ pub struct xLIST_ITEM {
     #[doc = "< Pointer to the previous ListItem_t in the list."]
     pub pxPrevious: *mut xLIST_ITEM,
     #[doc = "< Pointer to the object (normally a TCB) that contains the list item.  There is therefore a two way link between the object containing the list item and the list item itself."]
-    pub pvOwner: *mut ::std::os::raw::c_void,
+    pub pvOwner: *mut cty::c_void,
     pub pvContainer: *mut xLIST,
 }
 #[test]
 fn bindgen_test_layout_xLIST_ITEM() {
     assert_eq!(
-        ::std::mem::size_of::<xLIST_ITEM>(),
+        ::core::mem::size_of::<xLIST_ITEM>(),
         40usize,
         concat!("Size of: ", stringify!(xLIST_ITEM))
     );
     assert_eq!(
-        ::std::mem::align_of::<xLIST_ITEM>(),
+        ::core::mem::align_of::<xLIST_ITEM>(),
         8usize,
         concat!("Alignment of ", stringify!(xLIST_ITEM))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST_ITEM>())).xItemValue as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST_ITEM>())).xItemValue as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1335,7 +1336,7 @@ fn bindgen_test_layout_xLIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST_ITEM>())).pxNext as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST_ITEM>())).pxNext as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1345,7 +1346,7 @@ fn bindgen_test_layout_xLIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST_ITEM>())).pxPrevious as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST_ITEM>())).pxPrevious as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -1355,7 +1356,7 @@ fn bindgen_test_layout_xLIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST_ITEM>())).pvOwner as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST_ITEM>())).pvOwner as *const _ as usize },
         24usize,
         concat!(
             "Offset of field: ",
@@ -1365,7 +1366,7 @@ fn bindgen_test_layout_xLIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST_ITEM>())).pvContainer as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST_ITEM>())).pvContainer as *const _ as usize },
         32usize,
         concat!(
             "Offset of field: ",
@@ -1386,17 +1387,17 @@ pub struct xMINI_LIST_ITEM {
 #[test]
 fn bindgen_test_layout_xMINI_LIST_ITEM() {
     assert_eq!(
-        ::std::mem::size_of::<xMINI_LIST_ITEM>(),
+        ::core::mem::size_of::<xMINI_LIST_ITEM>(),
         24usize,
         concat!("Size of: ", stringify!(xMINI_LIST_ITEM))
     );
     assert_eq!(
-        ::std::mem::align_of::<xMINI_LIST_ITEM>(),
+        ::core::mem::align_of::<xMINI_LIST_ITEM>(),
         8usize,
         concat!("Alignment of ", stringify!(xMINI_LIST_ITEM))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xMINI_LIST_ITEM>())).xItemValue as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xMINI_LIST_ITEM>())).xItemValue as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1406,7 +1407,7 @@ fn bindgen_test_layout_xMINI_LIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xMINI_LIST_ITEM>())).pxNext as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xMINI_LIST_ITEM>())).pxNext as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1416,7 +1417,7 @@ fn bindgen_test_layout_xMINI_LIST_ITEM() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xMINI_LIST_ITEM>())).pxPrevious as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xMINI_LIST_ITEM>())).pxPrevious as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -1439,17 +1440,17 @@ pub struct xLIST {
 #[test]
 fn bindgen_test_layout_xLIST() {
     assert_eq!(
-        ::std::mem::size_of::<xLIST>(),
+        ::core::mem::size_of::<xLIST>(),
         40usize,
         concat!("Size of: ", stringify!(xLIST))
     );
     assert_eq!(
-        ::std::mem::align_of::<xLIST>(),
+        ::core::mem::align_of::<xLIST>(),
         8usize,
         concat!("Alignment of ", stringify!(xLIST))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST>())).uxNumberOfItems as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST>())).uxNumberOfItems as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1459,7 +1460,7 @@ fn bindgen_test_layout_xLIST() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST>())).pxIndex as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST>())).pxIndex as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1469,7 +1470,7 @@ fn bindgen_test_layout_xLIST() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xLIST>())).xListEnd as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xLIST>())).xListEnd as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -1511,20 +1512,20 @@ pub struct tskTaskControlBlock {
 pub type TaskHandle_t = *mut tskTaskControlBlock;
 pub type ConstTaskHandle_t = *const tskTaskControlBlock;
 pub type TaskHookFunction_t =
-    ::std::option::Option<unsafe extern "C" fn(arg: *mut ::std::os::raw::c_void) -> BaseType_t>;
+    ::core::option::Option<unsafe extern "C" fn(arg: *mut cty::c_void) -> BaseType_t>;
 pub const eTaskState_eRunning: eTaskState = 0;
 pub const eTaskState_eReady: eTaskState = 1;
 pub const eTaskState_eBlocked: eTaskState = 2;
 pub const eTaskState_eSuspended: eTaskState = 3;
 pub const eTaskState_eDeleted: eTaskState = 4;
 pub const eTaskState_eInvalid: eTaskState = 5;
-pub type eTaskState = ::std::os::raw::c_uint;
+pub type eTaskState = cty::c_uint;
 pub const eNotifyAction_eNoAction: eNotifyAction = 0;
 pub const eNotifyAction_eSetBits: eNotifyAction = 1;
 pub const eNotifyAction_eIncrement: eNotifyAction = 2;
 pub const eNotifyAction_eSetValueWithOverwrite: eNotifyAction = 3;
 pub const eNotifyAction_eSetValueWithoutOverwrite: eNotifyAction = 4;
-pub type eNotifyAction = ::std::os::raw::c_uint;
+pub type eNotifyAction = cty::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xTIME_OUT {
@@ -1534,17 +1535,17 @@ pub struct xTIME_OUT {
 #[test]
 fn bindgen_test_layout_xTIME_OUT() {
     assert_eq!(
-        ::std::mem::size_of::<xTIME_OUT>(),
+        ::core::mem::size_of::<xTIME_OUT>(),
         16usize,
         concat!("Size of: ", stringify!(xTIME_OUT))
     );
     assert_eq!(
-        ::std::mem::align_of::<xTIME_OUT>(),
+        ::core::mem::align_of::<xTIME_OUT>(),
         8usize,
         concat!("Alignment of ", stringify!(xTIME_OUT))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTIME_OUT>())).xOverflowCount as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTIME_OUT>())).xOverflowCount as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1554,7 +1555,7 @@ fn bindgen_test_layout_xTIME_OUT() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTIME_OUT>())).xTimeOnEntering as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTIME_OUT>())).xTimeOnEntering as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1568,24 +1569,24 @@ pub type TimeOut_t = xTIME_OUT;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xMEMORY_REGION {
-    pub pvBaseAddress: *mut ::std::os::raw::c_void,
+    pub pvBaseAddress: *mut cty::c_void,
     pub ulLengthInBytes: u32,
     pub ulParameters: u32,
 }
 #[test]
 fn bindgen_test_layout_xMEMORY_REGION() {
     assert_eq!(
-        ::std::mem::size_of::<xMEMORY_REGION>(),
+        ::core::mem::size_of::<xMEMORY_REGION>(),
         16usize,
         concat!("Size of: ", stringify!(xMEMORY_REGION))
     );
     assert_eq!(
-        ::std::mem::align_of::<xMEMORY_REGION>(),
+        ::core::mem::align_of::<xMEMORY_REGION>(),
         8usize,
         concat!("Alignment of ", stringify!(xMEMORY_REGION))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xMEMORY_REGION>())).pvBaseAddress as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xMEMORY_REGION>())).pvBaseAddress as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1595,7 +1596,7 @@ fn bindgen_test_layout_xMEMORY_REGION() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xMEMORY_REGION>())).ulLengthInBytes as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xMEMORY_REGION>())).ulLengthInBytes as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1605,7 +1606,7 @@ fn bindgen_test_layout_xMEMORY_REGION() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xMEMORY_REGION>())).ulParameters as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xMEMORY_REGION>())).ulParameters as *const _ as usize },
         12usize,
         concat!(
             "Offset of field: ",
@@ -1620,9 +1621,9 @@ pub type MemoryRegion_t = xMEMORY_REGION;
 #[derive(Debug, Copy, Clone)]
 pub struct xTASK_PARAMETERS {
     pub pvTaskCode: TaskFunction_t,
-    pub pcName: *const ::std::os::raw::c_char,
+    pub pcName: *const cty::c_char,
     pub usStackDepth: StackType_t,
-    pub pvParameters: *mut ::std::os::raw::c_void,
+    pub pvParameters: *mut cty::c_void,
     pub uxPriority: UBaseType_t,
     pub puxStackBuffer: *mut StackType_t,
     pub xRegions: [MemoryRegion_t; 1usize],
@@ -1630,17 +1631,17 @@ pub struct xTASK_PARAMETERS {
 #[test]
 fn bindgen_test_layout_xTASK_PARAMETERS() {
     assert_eq!(
-        ::std::mem::size_of::<xTASK_PARAMETERS>(),
+        ::core::mem::size_of::<xTASK_PARAMETERS>(),
         64usize,
         concat!("Size of: ", stringify!(xTASK_PARAMETERS))
     );
     assert_eq!(
-        ::std::mem::align_of::<xTASK_PARAMETERS>(),
+        ::core::mem::align_of::<xTASK_PARAMETERS>(),
         8usize,
         concat!("Alignment of ", stringify!(xTASK_PARAMETERS))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_PARAMETERS>())).pvTaskCode as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_PARAMETERS>())).pvTaskCode as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1650,7 +1651,7 @@ fn bindgen_test_layout_xTASK_PARAMETERS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_PARAMETERS>())).pcName as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_PARAMETERS>())).pcName as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1660,7 +1661,7 @@ fn bindgen_test_layout_xTASK_PARAMETERS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_PARAMETERS>())).usStackDepth as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_PARAMETERS>())).usStackDepth as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -1670,7 +1671,7 @@ fn bindgen_test_layout_xTASK_PARAMETERS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_PARAMETERS>())).pvParameters as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_PARAMETERS>())).pvParameters as *const _ as usize },
         24usize,
         concat!(
             "Offset of field: ",
@@ -1680,7 +1681,7 @@ fn bindgen_test_layout_xTASK_PARAMETERS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_PARAMETERS>())).uxPriority as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_PARAMETERS>())).uxPriority as *const _ as usize },
         32usize,
         concat!(
             "Offset of field: ",
@@ -1690,7 +1691,9 @@ fn bindgen_test_layout_xTASK_PARAMETERS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_PARAMETERS>())).puxStackBuffer as *const _ as usize },
+        unsafe {
+            &(*(::core::ptr::null::<xTASK_PARAMETERS>())).puxStackBuffer as *const _ as usize
+        },
         40usize,
         concat!(
             "Offset of field: ",
@@ -1700,7 +1703,7 @@ fn bindgen_test_layout_xTASK_PARAMETERS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_PARAMETERS>())).xRegions as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_PARAMETERS>())).xRegions as *const _ as usize },
         48usize,
         concat!(
             "Offset of field: ",
@@ -1715,7 +1718,7 @@ pub type TaskParameters_t = xTASK_PARAMETERS;
 #[derive(Debug, Copy, Clone)]
 pub struct xTASK_STATUS {
     pub xHandle: TaskHandle_t,
-    pub pcTaskName: *const ::std::os::raw::c_char,
+    pub pcTaskName: *const cty::c_char,
     pub xTaskNumber: UBaseType_t,
     pub eCurrentState: eTaskState,
     pub uxCurrentPriority: UBaseType_t,
@@ -1727,17 +1730,17 @@ pub struct xTASK_STATUS {
 #[test]
 fn bindgen_test_layout_xTASK_STATUS() {
     assert_eq!(
-        ::std::mem::size_of::<xTASK_STATUS>(),
+        ::core::mem::size_of::<xTASK_STATUS>(),
         72usize,
         concat!("Size of: ", stringify!(xTASK_STATUS))
     );
     assert_eq!(
-        ::std::mem::align_of::<xTASK_STATUS>(),
+        ::core::mem::align_of::<xTASK_STATUS>(),
         8usize,
         concat!("Alignment of ", stringify!(xTASK_STATUS))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).xHandle as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).xHandle as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1747,7 +1750,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).pcTaskName as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).pcTaskName as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1757,7 +1760,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).xTaskNumber as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).xTaskNumber as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -1767,7 +1770,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).eCurrentState as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).eCurrentState as *const _ as usize },
         24usize,
         concat!(
             "Offset of field: ",
@@ -1777,7 +1780,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).uxCurrentPriority as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).uxCurrentPriority as *const _ as usize },
         32usize,
         concat!(
             "Offset of field: ",
@@ -1787,7 +1790,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).uxBasePriority as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).uxBasePriority as *const _ as usize },
         40usize,
         concat!(
             "Offset of field: ",
@@ -1797,7 +1800,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).ulRunTimeCounter as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).ulRunTimeCounter as *const _ as usize },
         48usize,
         concat!(
             "Offset of field: ",
@@ -1807,7 +1810,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<xTASK_STATUS>())).pxStackBase as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<xTASK_STATUS>())).pxStackBase as *const _ as usize },
         56usize,
         concat!(
             "Offset of field: ",
@@ -1818,7 +1821,7 @@ fn bindgen_test_layout_xTASK_STATUS() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<xTASK_STATUS>())).usStackHighWaterMark as *const _ as usize
+            &(*(::core::ptr::null::<xTASK_STATUS>())).usStackHighWaterMark as *const _ as usize
         },
         64usize,
         concat!(
@@ -1833,13 +1836,13 @@ pub type TaskStatus_t = xTASK_STATUS;
 pub const eSleepModeStatus_eAbortSleep: eSleepModeStatus = 0;
 pub const eSleepModeStatus_eStandardSleep: eSleepModeStatus = 1;
 pub const eSleepModeStatus_eNoTasksWaitingTimeout: eSleepModeStatus = 2;
-pub type eSleepModeStatus = ::std::os::raw::c_uint;
+pub type eSleepModeStatus = cty::c_uint;
 extern "C" {
     pub fn xTaskCreate(
         pxTaskCode: TaskFunction_t,
-        pcName: *const ::std::os::raw::c_char,
+        pcName: *const cty::c_char,
         uxStackDepth: StackType_t,
-        pvParameters: *mut ::std::os::raw::c_void,
+        pvParameters: *mut cty::c_void,
         uxPriority: UBaseType_t,
         pxCreatedTask: *mut TaskHandle_t,
     ) -> BaseType_t;
@@ -1847,9 +1850,9 @@ extern "C" {
 extern "C" {
     pub fn xTaskCreateStatic(
         pxTaskCode: TaskFunction_t,
-        pcName: *const ::std::os::raw::c_char,
+        pcName: *const cty::c_char,
         uxStackDepth: StackType_t,
-        pvParameters: *mut ::std::os::raw::c_void,
+        pvParameters: *mut cty::c_void,
         uxPriority: UBaseType_t,
         puxStackBuffer: *mut StackType_t,
         pxTaskBuffer: *mut StaticTask_t,
@@ -2540,10 +2543,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\defgroup pcTaskGetName pcTaskGetName"]
     #[doc = " \\ingroup TaskUtils"]
-    pub fn pcTaskGetName(xTaskToQuery: TaskHandle_t) -> *mut ::std::os::raw::c_char;
+    pub fn pcTaskGetName(xTaskToQuery: TaskHandle_t) -> *mut cty::c_char;
 }
 extern "C" {
-    pub fn xTaskGetHandle(pcNameToQuery: *const ::std::os::raw::c_char) -> TaskHandle_t;
+    pub fn xTaskGetHandle(pcNameToQuery: *const cty::c_char) -> TaskHandle_t;
 }
 extern "C" {
     pub fn xTaskGetStaticBuffers(
@@ -2559,10 +2562,7 @@ extern "C" {
     pub fn uxTaskGetStackHighWaterMark2(xTask: TaskHandle_t) -> StackType_t;
 }
 extern "C" {
-    pub fn vApplicationStackOverflowHook(
-        xTask: TaskHandle_t,
-        pcTaskName: *mut ::std::os::raw::c_char,
-    );
+    pub fn vApplicationStackOverflowHook(xTask: TaskHandle_t, pcTaskName: *mut cty::c_char);
 }
 extern "C" {
     pub fn vApplicationIdleHook();

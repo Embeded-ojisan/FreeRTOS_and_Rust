@@ -15,7 +15,7 @@ SRC     +=  ${FREERTOS_KERNEL_SOURCE_DIR}/event_groups.c
 
 CC      	:=  arm-none-eabi-gcc
 
-CFLAGS		+=	-mcpu=cortex-m3
+CFLAGS		+=	-mthumb -mcpu=cortex-m3
 
 INCLUDE_DIR  +=   -I${FREERTOS_KERNEL_INCLUDE_DIR}
 INCLUDE_DIR  +=   -I${FREERTOS_CONFIG_DIR}
