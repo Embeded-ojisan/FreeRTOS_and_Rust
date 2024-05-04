@@ -6,8 +6,15 @@ version = 3
 name = "FreeRTOS_and_Rust"
 version = "0.1.0"
 dependencies = [
+ "cc",
  "cty",
 ]
+
+[[package]]
+name = "cc"
+version = "1.0.96"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "065a29261d53ba54260972629f9ca6bffa69bac13cd1fed61420f7fa68b9f8bd"
 
 [[package]]
 name = "cty"

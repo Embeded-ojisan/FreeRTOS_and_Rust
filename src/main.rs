@@ -5,7 +5,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 
-include!("../freertos/build/task.rs");
+include!("../freertos/build/FreeRTOSheader.rs");
 
 use core::panic::PanicInfo;
 use core::ptr;
