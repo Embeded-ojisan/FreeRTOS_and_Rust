@@ -1,3 +1,4 @@
+/bindgen
 /target
 /freertos/FreeRTOS
 /Cargo.toml

@@ -9,7 +9,7 @@ qemu-system-arm \
       -d cpu\
       -d exec\
       -cpu cortex-m3 \
-      --machine stm32vldiscovery \
+      --machine lm3s6965evb \
       -nographic \
       -semihosting-config enable=on,target=native \
       -gdb tcp::1234 \
