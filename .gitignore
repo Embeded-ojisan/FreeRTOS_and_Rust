@@ -1,4 +1,4 @@
-/bindgen/*
+/bindgen/FreeRTOSheader.rs
 /target
 /freertos/FreeRTOS
 /Cargo.toml
