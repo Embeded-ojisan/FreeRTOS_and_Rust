@@ -1,0 +1,1 @@
+arm-none-eabi-objdump -m arm  -M force-thumb -D ../target/thumbv7m-none-eabi/debug/FreeRTOS_and_Rust >  ../result.asm
